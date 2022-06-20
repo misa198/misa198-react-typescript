@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.eslint.json"
+      }
+    }
+  },
+  "rules": {
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-duplicates": "off",
+    "import/no-self-import": "off",
+    "import/no-relative-packages": "off",
+    "import/order": "off",
+    "import/first": "off",
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "import/no-useless-path-segments": "off",
+    "import/no-named-as-default": "off",
+    "no-param-reassign": "off",
+    "react/function-component-definition": "off",
+    "react/no-children-prop": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unused-prop-types": "off",
+    "react/require-default-props": "off"
+  }
+}

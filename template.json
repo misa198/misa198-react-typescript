@@ -1,0 +1,80 @@
+{
+  "package": {
+    "dependencies": {
+      "@reduxjs/toolkit": "^1.8.2",
+      "@testing-library/jest-dom": "^5.14.1",
+      "@testing-library/react": "^13.0.0",
+      "@testing-library/user-event": "^13.2.1",
+      "axios": "^0.27.2",
+      "i18next": "^21.8.8",
+      "js-cookie": "^3.0.1",
+      "loglevel": "^1.8.0",
+      "react": "^18.1.0",
+      "react-dom": "^18.1.0",
+      "react-i18next": "^11.17.0",
+      "react-redux": "^8.0.2",
+      "react-router-dom": "^6.3.0",
+      "react-scripts": "5.0.1",
+      "redux-first-history": "^5.0.9",
+      "redux-logger": "^3.0.6",
+      "typescript": "^4.4.2",
+      "web-vitals": "^2.1.0"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "lint:es": "eslint . --ext .js,.jsx,.ts,.tsx",
+      "lint:style": "stylelint 'src/**/styled.ts' 'src/**/*.tsx'",
+      "lint": "yarn lint:es && yarn lint:style",
+      "postinstall": "husky install"
+    },
+    "eslintConfig": {
+      "extends": ["react-app", "react-app/jest"]
+    },
+    "browserslist": {
+      "production": [">0.2%", "not dead", "not op_mini all"],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@commitlint/cli": "^17.0.2",
+      "@commitlint/config-conventional": "^17.0.2",
+      "@types/jest": "^27.0.1",
+      "@types/js-cookie": "^3.0.2",
+      "@types/node": "^16.7.13",
+      "@types/react": "^18.0.0",
+      "@types/react-dom": "^18.0.0",
+      "@types/react-router-dom": "^5.3.3",
+      "@types/redux-logger": "^3.0.9",
+      "@typescript-eslint/eslint-plugin": "^5.13.0",
+      "@typescript-eslint/parser": "^5.0.0",
+      "eslint": "^8.2.0",
+      "eslint-config-airbnb": "19.0.4",
+      "eslint-config-airbnb-typescript": "^17.0.0",
+      "eslint-config-prettier": "^8.5.0",
+      "eslint-plugin-import": "^2.25.3",
+      "eslint-plugin-jsx-a11y": "^6.5.1",
+      "eslint-plugin-prettier": "^4.0.0",
+      "eslint-plugin-react": "^7.28.0",
+      "eslint-plugin-react-hooks": "^4.3.0",
+      "husky": "^8.0.1",
+      "lint-staged": "^13.0.0",
+      "prettier": "^2.6.2",
+      "stylelint": "^14.8.5",
+      "stylelint-a11y": "^1.2.3",
+      "stylelint-config-prettier": "^9.0.3",
+      "stylelint-config-standard": "^25.0.0",
+      "stylelint-config-styled-components": "^0.1.1",
+      "stylelint-processor-styled-components": "^1.10.0"
+    },
+    "lint-staged": {
+      "*.{ts,tsx,js,jsx}": ["eslint --cache"],
+      "styled.ts": ["stylelint --cache"]
+    }
+  }
+}
