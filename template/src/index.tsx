@@ -5,6 +5,7 @@ import i18n from 'i18next';
 import en from 'locales/en/en.json';
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
 import { initReactI18next } from 'react-i18next';
 import { Provider } from 'react-redux';
 import { HistoryRouter } from 'redux-first-history/rr6';
@@ -31,7 +32,9 @@ root.render(
   <StrictMode>
     <Provider store={store}>
       <HistoryRouter history={history}>
-        <App />
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
       </HistoryRouter>
     </Provider>
   </StrictMode>,

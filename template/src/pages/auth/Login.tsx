@@ -2,6 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from 'app/hooks/redux';
 import { loginThunk } from 'app/store/features/auth/authThunks';
+import HelmetMeta from 'components/common/HelmetMeta';
 import { RoleCode } from 'constants/roles';
 import { ChangeEvent, FC, useState } from 'react';
 
@@ -20,6 +21,7 @@ const Login: FC = () => {
 
   return (
     <div>
+      <HelmetMeta title="Login" />
       <h4>Welcome to Login</h4>
       <select onChange={onChange}>
         {Object.values(RoleCode).map((r) => (

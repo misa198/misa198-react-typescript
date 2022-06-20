@@ -1,6 +1,6 @@
 {
-  "name": "misa198-react-ts",
-  "version": "1.0.1",
+  "name": "cra-template-misa198-react-ts",
+  "version": "1.0.0",
   "keywords": [
     "react",
     "create-react-app",
@@ -11,8 +11,7 @@
   "description": "The base TypeScript template for React App",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thanhvu1982/misa198-react-ts.git",
-    "directory": "packages/cra-template-typescript"
+    "url": "https://github.com/thanhvu1982/misa198-react-ts.git"
   },
   "license": "MIT",
   "engines": {

@@ -1,6 +1,7 @@
 // Demo component
 
 import { useAppSelector } from 'app/hooks/redux';
+import HelmetMeta from 'components/common/HelmetMeta';
 import { User } from 'modals/User';
 import { FC } from 'react';
 
@@ -9,6 +10,7 @@ const Profile: FC = () => {
 
   return (
     <>
+      <HelmetMeta title="Profile" />
       <h4>
         Hello {user.role} - {user.name}
       </h4>
