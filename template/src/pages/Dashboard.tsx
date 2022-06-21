@@ -2,13 +2,18 @@
 
 import HelmetMeta from 'components/common/HelmetMeta';
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const Dashboard: FC = () => (
-  <>
-    <HelmetMeta title="Dashboard" />
-    <h4>Welcome to Dashboard </h4>
-    <p>Only admin and mng can access this page</p>
-  </>
-);
+const Dashboard: FC = () => {
+  const { t } = useTranslation();
+
+  return (
+    <>
+      <HelmetMeta title={t('dashboard.title')} />
+      <h4>{t('dashboard.welcome')}</h4>
+      <p>{t('dashboard.description')}</p>
+    </>
+  );
+};
 
 export default Dashboard;

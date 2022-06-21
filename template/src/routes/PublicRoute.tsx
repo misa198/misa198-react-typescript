@@ -9,7 +9,7 @@ const PublicRoute: FC<Props> = ({ component }) => {
   const Component = lazy(component);
 
   return (
-    <Suspense fallback={<></>}>
+    <Suspense fallback={<>Loading</>}>
       <Component />
     </Suspense>
   );

@@ -4,17 +4,22 @@ import { useAppSelector } from 'app/hooks/redux';
 import HelmetMeta from 'components/common/HelmetMeta';
 import { User } from 'modals/User';
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Profile: FC = () => {
+  const { t } = useTranslation();
   const user = useAppSelector((state) => state.auth.user.data) as User;
 
   return (
     <>
-      <HelmetMeta title="Profile" />
+      <HelmetMeta title={t('profile.title')} />
       <h4>
-        Hello {user.role} - {user.name}
+        {t('profile.welcome', {
+          name: user.name,
+          role: user.role,
+        })}
       </h4>
-      <p>Everyone after login can access this page</p>
+      <p>{t('profile.description')}</p>
     </>
   );
 };

@@ -20,7 +20,7 @@ const PrivateRoute: FC<Props> = ({ permissions, component }) => {
   if (!accessToken || user.error) return <Navigate to="/auth/login" />;
   if (!permissions)
     return (
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<>Loading</>}>
         <Component />
       </Suspense>
     );
@@ -28,7 +28,7 @@ const PrivateRoute: FC<Props> = ({ permissions, component }) => {
   if (!user.loading && user.data) {
     if (permissions.includes(user.data.role))
       return (
-        <Suspense fallback={<></>}>
+        <Suspense fallback={<>Loading</>}>
           <Component />
         </Suspense>
       );

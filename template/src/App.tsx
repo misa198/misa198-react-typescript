@@ -19,7 +19,7 @@ const App: FC = () => {
   return (
     <>
       <HelmetMeta />
-      <Suspense fallback="loading">
+      <Suspense fallback="<>Loading</>">
         <Navbar />
         <Router />
       </Suspense>

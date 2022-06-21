@@ -9,10 +9,9 @@ const Home: FC = () => {
 
   return (
     <>
-      <HelmetMeta title="Home" />
-      <h1>{t('hello')}</h1>
-      <h1>Welcome to Home Page</h1>
-      <p>Everyone can access this page</p>
+      <HelmetMeta title={t('home.title')} />
+      <h1>{t('home.title')}</h1>
+      <p>{t('home.welcome')}</p>
     </>
   );
 };
