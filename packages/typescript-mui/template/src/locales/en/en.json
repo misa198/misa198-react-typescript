@@ -1,0 +1,38 @@
+{
+  "btn": {
+    "submit": "Submit"
+  },
+  "layouts": {
+    "auth": {
+      "title": "Auth Layout",
+      "description": "This is auth layout, can not access this page after login"
+    },
+    "public": {
+      "title": "Public Layout",
+      "description": "This is public route, everyone can access this page"
+    },
+    "private": {
+      "title": "Private Layout",
+      "description": "This is private route, only logged in user can access this page"
+    }
+  },
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome to Home page"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to Dashboard",
+    "description": "Only admin and mng can access this page"
+  },
+  "profile": {
+    "title": "Profile",
+    "welcome": "Hello {{name}} - {{role}}",
+    "description": "Everyone after login can access this page"
+  },
+  "login": {
+    "title": "Login",
+    "role": "Role",
+    "welcome": "Welcome to Login page"
+  }
+}

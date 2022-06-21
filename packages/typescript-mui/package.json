@@ -1,0 +1,28 @@
+{
+  "name": "cra-template-misa198-react-typescript-mui",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typescript",
+    "misa198",
+    "mui"
+  ],
+  "description": "The base TypeScript template for React App",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thanhvu1982/misa198-react-typescript.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "bugs": {
+    "url": "https://github.com/thanhvu1982/misa198-react-typescript.git/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
