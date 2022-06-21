@@ -20,7 +20,7 @@ export const routes: RouteObject[] = [
         element: <PublicRoute component={() => import('pages/Home')} />,
       },
       {
-        path: '404',
+        path: '*',
         element: <PublicRoute component={() => import('pages/Page404')} />,
       },
     ],
