@@ -1,21 +1,33 @@
-# Introduction
+# Misa198 React Typescript Template
+
+## Introduction
 
 React Typescript Codebase
 
-<br />
+## Installation
 
-# Features
+```bash
+yarn create react-app your-app --template misa198-react-typescript
+```
 
-- Authentication & Authorization
-- Route (React Router Dom v6)
-- Store (Redux Toolkit)
-- API (Axios)
-- Hooks
-- i18n
-- Logger (loglevel - dev, loglevel-plugin-remote - production)
-- Eslint, stylelint, prettier, lint-staged, husky, commitlint
+## Features
 
-# Optional
+| Features                                                     | Note                                                                                         |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| Authentication & Authorization                               |                                                                                              |
+| Route (React Router Dom v6)                                  | https://reactrouter.com/                                                                     |
+| Store (Redux Toolkit)                                        | https://redux-toolkit.js.org/                                                                |
+| API (Axios)                                                  | https://axios-http.com/                                                                      |
+| i18n                                                         | https://react.i18next.                                                                       |
+| Jest                                                         | https://reactjs.org/docs/testing.html.com/                                                   |
+| Logger (loglevel - dev, loglevel-plugin-remote - production) | https://github.com/pimterry/loglevel <br />https://github.com/kutuluk/loglevel-plugin-remote |
+| Eslint, prettier (Airbnb)                                    | https://github.com/toshi-toma/eslint-config-airbnb-typescript-prettier                       |
+| Stylelint                                                    | https://stylelint.io/                                                                        |
+| Husky                                                        | https://typicode.github.io/husky                                                             |
+| Commitlint                                                   | https://commitlint.js.org<br />https://www.conventionalcommits.org/en/v1.0.0/                |
 
-- Cypress
-- Jest
+## Optional
+
+| Feature | Note                    |
+| ------- | ----------------------- |
+| Cypress | https://www.cypress.io/ |
