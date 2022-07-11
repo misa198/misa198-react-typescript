@@ -1,43 +1,30 @@
 import App from 'App';
-import { history, store } from 'app/store';
+import { store } from 'app/store';
 import 'assets/styles/global.css';
-import i18n from 'i18next';
-import en from 'locales/en/en.json';
+import initI18n from 'i18n';
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
-import { initReactI18next } from 'react-i18next';
 import { Provider } from 'react-redux';
-import { HistoryRouter } from 'redux-first-history/rr6';
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-
-i18n.use(initReactI18next).init({
-  resources: {
-    en: {
-      translation: en,
-    },
-  },
-  lng: 'en',
-  fallbackLng: 'en',
-
-  interpolation: {
-    escapeValue: false,
-  },
-});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
-root.render(
-  <StrictMode>
-    <Provider store={store}>
-      <HistoryRouter history={history}>
-        <HelmetProvider>
-          <App />
-        </HelmetProvider>
-      </HistoryRouter>
-    </Provider>
-  </StrictMode>,
-);
+
+initI18n().then(() => {
+  root.render(
+    <StrictMode>
+      <Provider store={store}>
+        <BrowserRouter>
+          <HelmetProvider>
+            <App />
+          </HelmetProvider>
+        </BrowserRouter>
+      </Provider>
+    </StrictMode>,
+  );
+});
 
 reportWebVitals();
