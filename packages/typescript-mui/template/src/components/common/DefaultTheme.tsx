@@ -4,10 +4,10 @@ import { FC, PropsWithChildren } from 'react';
 import theme from 'themes/defaultTheme';
 
 const DefaultTheme: FC<PropsWithChildren> = ({ children }) => (
-  <>
+  <ThemeProvider theme={theme}>
     <CssBaseline />
-    <ThemeProvider theme={theme}>{children}</ThemeProvider>
-  </>
+    {children}
+  </ThemeProvider>
 );
 
 export default DefaultTheme;

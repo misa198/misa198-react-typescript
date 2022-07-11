@@ -1,24 +1,22 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { createBrowserHistory } from 'history';
-import { createReduxHistoryContext } from 'redux-first-history';
 import logger from 'redux-logger';
+import { CurriedGetDefaultMiddleware } from '@reduxjs/toolkit/dist/getDefaultMiddleware';
 import authReducer from './features/auth/authSlice';
 
-const { createReduxHistory, routerMiddleware, routerReducer } =
-  createReduxHistoryContext({ history: createBrowserHistory() });
+const production = process.env.NODE_ENV === 'production';
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  router: routerReducer,
 });
+
+const middleware = (getDefaultMiddleware: CurriedGetDefaultMiddleware) =>
+  production ? getDefaultMiddleware() : getDefaultMiddleware().concat(logger);
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(logger).concat(routerMiddleware),
+  middleware,
+  devTools: !production,
 });
 
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof rootReducer>;
 export type AppDispatch = typeof store.dispatch;
-
-export const history = createReduxHistory(store);
